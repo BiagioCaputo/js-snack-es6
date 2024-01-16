@@ -25,13 +25,13 @@ console.log(guestList);
 /*************************************** SNACK 2 ********************************************/
 
 const students = [
-    {id: 213 , Name:'Marco della Rovere', grade: 78},
-    {id: 110 , Name:'Paola Cortellessa', grade: 96},
-    {id: 250 , Name:'Andrea Mantegna', grade: 48},
-    {id: 145 , Name:'Gaia Borromini', grade: 74},
-    {id: 196 , Name:'Luigi Grimaldello', grade: 68},
-    {id: 102 , Name:'Piero della Francesca', grade: 50},
-    {id: 120 , Name:'Francesca da Polenta', grade: 84},
+    {id: 213 , name:'Marco della Rovere', grade: 78},
+    {id: 110 , name:'Paola Cortellessa', grade: 96},
+    {id: 250 , name:'Andrea Mantegna', grade: 48},
+    {id: 145 , name:'Gaia Borromini', grade: 74},
+    {id: 196 , name:'Luigi Grimaldello', grade: 68},
+    {id: 102 , name:'Piero della Francesca', grade: 50},
+    {id: 120 , name:'Francesca da Polenta', grade: 84},
 ]
 
 console.log(students);
@@ -47,3 +47,13 @@ console.log(goodGradeStudents);
 const goodGradeHighIdStudents = students.filter( student => student.grade > 70 && student.id > 120);
 
 console.log(goodGradeHighIdStudents);
+
+//stampa delle targhette degli studenti con i loro nomi in maiuscolo
+
+const namesStudents = students.map(student => {
+    let guest = "";
+    guest = student.name;
+    return guest.toUpperCase();
+})
+
+console.log(namesStudents);
