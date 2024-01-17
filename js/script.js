@@ -57,3 +57,31 @@ const namesStudents = students.map(student => {
 })
 
 console.log(namesStudents);
+
+/*************************************** SNACK 3 ********************************************/
+
+const bikes = [
+    { name:'Xyz', peso: 70},
+    { name:'Link', peso: 96},
+    { name:'Pendulum', peso: 48},
+    { name:'Fusion', peso: 74},
+]
+
+const lightestBike = bikes
+
+console.log(lightestBike);
+
+
+
+/*************************************** SNACK 4 ********************************************/
+
+const teams = [
+    {name:"Inter" , score:0 ,  foulDrawn: 0},
+    {name:"Palermo" , score:0 ,  foulDrawn: 0},
+    {name:"Roma" , score:0 ,  foulDrawn: 0},
+    {name:"Lazio" , score:0 ,  foulDrawn: 0}
+]
+
+//Funzione che genera numeri random
+
+const getRandomNumber = maxRandomNumber => Math.floor(Math.random() * (maxRandomNumber - 1 + 1) ) + 1;
