@@ -89,3 +89,12 @@ console.log(teams);
 //Funzione che genera numeri random
 
 const getRandomNumber = maxRandomNumber => Math.floor(Math.random() * (maxRandomNumber - 1 + 1) ) + 1;
+
+//Funzione che genera un nuovo array con numeri randomici per il punteggio e i falli
+const newTeams = teams.map((team) => {
+    team.score = getRandomNumber(50);
+    team.foulDrawn = getRandomNumber(20);
+    return `name:${team.name} score:${team.score} foulDrawn:${team.foulDrawn}`;
+});
+
+console.log(newTeams);
