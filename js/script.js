@@ -67,6 +67,8 @@ const bikes = [
     { name:'Fusion', peso: 74},
 ]
 
+console.log(bikes);
+
 const lightestBike = bikes
 
 console.log(lightestBike);
@@ -81,6 +83,8 @@ const teams = [
     {name:"Roma" , score:0 ,  foulDrawn: 0},
     {name:"Lazio" , score:0 ,  foulDrawn: 0}
 ]
+
+console.log(teams);
 
 //Funzione che genera numeri random
 
