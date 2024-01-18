@@ -61,18 +61,29 @@ console.log(namesStudents);
 /*************************************** SNACK 3 ********************************************/
 
 const bikes = [
-    { name:'Xyz', peso: 70},
-    { name:'Link', peso: 96},
-    { name:'Pendulum', peso: 48},
-    { name:'Fusion', peso: 74},
+    { name:'Xyz', weight: 70},
+    { name:'Link', weight: 96},
+    { name:'Pendulum', weight: 48},
+    { name:'Fusion', weight: 74},
 ]
 
-console.log(bikes);
+const getLightestItem = arr => {
 
-const lightestBike = bikes
+    let lightestItem = arr[0];
 
-console.log(lightestBike);
+    arr.forEach(item =>{
+        const {weight} = item;
+        if (weight < lightestItem.weight) lightestItem = item;
 
+    });
+
+    return lightestItem;
+
+}
+
+const lightest = getLightestItem(bikes);
+
+console.log(lightest);
 
 
 /*************************************** SNACK 4 ********************************************/
