@@ -95,17 +95,23 @@ const teams = [
     {name:"Lazio" , score:0 ,  foulDrawn: 0}
 ]
 
-console.log(teams);
-
 //Funzione che genera numeri random
 
 const getRandomNumber = maxRandomNumber => Math.floor(Math.random() * (maxRandomNumber - 1 + 1) ) + 1;
 
-//Funzione che genera un nuovo array con numeri randomici per il punteggio e i falli
-const newTeams = teams.map((team) => {
+//Valori randomici per il punteggio e i falli
+
+teams.forEach(team => {
     team.score = getRandomNumber(50);
     team.foulDrawn = getRandomNumber(20);
-    return `name:${team.name} score:${team.score} foulDrawn:${team.foulDrawn}`;
+});
+
+console.log(teams);
+
+//stampa lista con soltanto nomi e falli del team
+const newTeams = teams.map(team =>{
+    const {name, foulDrawn} = team;
+    return {name, foulDrawn};
 });
 
 console.log(newTeams);
